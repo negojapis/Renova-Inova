@@ -669,6 +669,7 @@ a {
     
     .menu-toggle {
         display: flex;
+        order: 3;
     }
 
     .navbar nav ul {
@@ -694,21 +695,71 @@ a {
         margin: 15px 0;
     }
 
+    .hero {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 12px solid var(--primary-color); /* Faixinha roxa para separar as seções */
+    }
+
+    .hero-image {
+        padding-top: 75px; /* Evita que o menu sobreponha a imagem */
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        transform: none; /* Removi o zoom para não cortar a pena e o R */
+        margin: 0;
+    }
+
+    .hero-bottom-bar {
+        display: none; /* Esconde toda a caixa roxa no celular */
+    }
+
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 2.6rem; /* Voltei com um tamanho maior para o título */
     }
     
     .hero .subtitle {
-        font-size: 0.8rem;
+        font-size: 0.9rem; /* Levemente maior */
     }
     
     .hero .description {
-        font-size: 1rem;
+        font-size: 1.2rem; /* Levemente maior */
+    }
+
+    .about, .agency, .services, .cases, .mvv {
+        padding: 50px 0; /* Sobe a seção reduzindo o espaçamento excessivo no celular */
     }
 
     .about-grid, .agency-grid, .cards-grid, .services-grid, .cases-grid, .cta-buttons {
         grid-template-columns: 1fr;
         gap: 30px;
+    }
+
+    .about-text h2 {
+        white-space: nowrap;
+        font-size: clamp(1.5rem, 8vw, 2.5rem);
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    /* Efeito interativo ao tocar no celular */
+    .about-text h2:active {
+        transform: scale(0.95);
+        color: var(--accent-color);
+    }
+    
+    /* Menu hambúrguer interativo (Vira X) */
+    .menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
     
     .cta-buttons {

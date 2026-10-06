@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggle) {
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
+            menuToggle.classList.toggle('active'); // Adiciona/remove classe para animação do 'X'
         });
     }
 
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             if(navMenu.classList.contains('active')){
                 navMenu.classList.remove('active');
+                if (menuToggle) menuToggle.classList.remove('active');
             }
         });
     });
