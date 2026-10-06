@@ -714,7 +714,7 @@ a {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        min-height: 85vh; /* Aumenta o espaço em branco na parte de baixo para empurrar a próxima seção */
+        padding-bottom: 70px; /* Garante que o letreiro não sobreponha a imagem, mantendo um espaço agradável */
     }
 
     .hero-image {
