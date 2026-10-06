@@ -7,14 +7,21 @@
     <meta name="description" content="Sua parceira que eleva sua presença no digital. Renovar e inovar a forma como o seu negócio é visto.">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/Logo%20Renova%20inova%26%20com%20fundo%20transparente22.png">
+    <link rel="apple-touch-icon" href="assets/Logo%20Renova%20inova%26%20com%20fundo%20transparente22.png">
 </head>
 <body>
 
     <!-- Header / Nav -->
     <header class="navbar">
-        <div class="logo">RENOVA <span class="amp">&</span> INOVA</div>
+        <a href="#home" class="logo"><img src="assets/Logo Renova%26inova em fundo transparente.png" alt="Renova & Inova Logo"></a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <nav>
-            <ul>
+            <ul class="nav-menu">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#proposito">Propósito</a></li>
                 <li><a href="#servicos">Serviços</a></li>
@@ -26,12 +33,16 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <p class="subtitle">RENOVA & INOVA</p>
-            <h1>MARKETING PARA NEGÓCIOS</h1>
-            <p class="description">SUA PARCEIRA QUE ELEVA SUA PRESENÇA NO DIGITAL</p>
-            <a href="#contato" class="btn-primary">Transforme sua marca</a>
+        <div class="hero-image">
+            <img src="assets/Pena real sobre logotipo elegante.png" alt="Renova & Inova Hero">
+        </div>
+        <div class="hero-bottom-bar">
+            <div class="hero-content">
+                <p class="subtitle">RENOVA & INOVA</p>
+                <h1>MARKETING PARA NEGÓCIOS</h1>
+                <p class="description">SUA PARCEIRA QUE ELEVA SUA PRESENÇA NO DIGITAL</p>
+                <a href="#contato" class="btn-primary">Transforme sua marca</a>
+            </div>
         </div>
     </section>
 
@@ -106,7 +117,14 @@
             
             <div class="services-grid">
                 <div class="service-item">
-                    <img src="assets/IMG_0188.PNG" alt="Fotos profissionais" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+                    <div class="service-slider">
+                        <!-- Fotos reais carregadas da pasta assets -->
+                        <img src="assets/IMG_0188.PNG" alt="Fotos profissionais 1" class="slide active">
+                        <img src="assets/img_p6_5.png" alt="Fotos profissionais 2" class="slide">
+                        <img src="assets/img_p6_2.png" alt="Fotos profissionais 3" class="slide">
+                        <img src="assets/img_p6_3.png" alt="Fotos profissionais 4" class="slide">
+                        <img src="assets/img_p6_4.png" alt="Fotos profissionais 5" class="slide">
+                    </div>
                     <div class="service-content">
                         <h3>Fotos profissionais</h3>
                         <ul>
@@ -166,7 +184,8 @@
                     </div>
                 </div>
                 <div class="service-item">
-                    <img src="assets/img_p12_1.png" alt="Branding e Identidade Visual" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
+                    <!-- Substitua 'brandbook.png' pelo nome real da imagem da Eternicca que você salvar na pasta assets -->
+                    <img src="assets/brandbook.png.png" alt="Branding e Identidade Visual" style="width: 100%; height: 250px; object-fit: cover; border-radius: 8px; margin-bottom: 20px;">
                     <div class="service-content">
                         <h3>Branding e Identidade Visual</h3>
                         <ul>
@@ -205,8 +224,13 @@
                 <div class="case-card">
                     <h3>Identidade Visual Criadas</h3>
                     <p>L Black, BigFly, Sonhos Decor, Mazuh, Eternicca, Colorê.</p>
-                    <div style="margin-top: 20px;">
-                        <img src="assets/img_p6_6.png" alt="Logos Identidade Visual" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                    <div style="margin-top: 20px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+                        <img src="assets/{B28C7CCB-133E-488F-910F-CF26498BCDA6}.png" alt="L Black" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <img src="assets/{9AB920AC-C146-468D-820A-C9F4BDF4F6FC}.png" alt="Mazuh" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <img src="assets/{3C574149-A150-47C7-90CD-768C1EDD1F84}.png" alt="BigFly" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <img src="assets/{60A98AE1-F9E3-4997-947E-DA0BE8D943C2}.png" alt="Eternicca" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <img src="assets/{D36B16EA-40AE-465C-998E-AEF406916C54}.png" alt="Sonhos Decor" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                        <img src="assets/{8E496019-1B9D-4A3C-8C04-4DD7B20E45F4}.png" alt="Colorê" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
                     </div>
                 </div>
             </div>
@@ -253,12 +277,11 @@
 
     <!-- CTA / Footer -->
     <footer class="footer" id="contato">
+        <canvas id="glsl-hills-canvas"></canvas>
         <div class="cta-section">
             <h2 class="cta-title">SEU NEGÓCIO MERECE SER VISTO E ESCOLHIDO!</h2>
             <p class="cta-text">
-                MARKETING <em class="title-serif">NÃO É UM GASTO</em> – É O INVESTIMENTO QUE COLOCA DINHEIRO DE VOLTA NO SEU BOLSO.<br>
-                CADA ESTRATÉGIA, CADA CONTEÚDO QUE CRIAMOS JUNTOS <strong class="purple-text">AUMENTA</strong> O VALOR DA SUA MARCA E <strong class="purple-text">ATRAI</strong> MAIS CLIENTES PRONTOS PARA FECHAR COM VOCÊ.<br>
-                DÊ ESSE PASSO PARA DESTACAR SUA EMPRESA E TRANSFORMAR SUA PRESENÇA ONLINE.
+                MARKETING <em class="title-serif">NÃO É UM GASTO</em> – É O INVESTIMENTO QUE COLOCA DINHEIRO DE VOLTA NO SEU BOLSO. CADA ESTRATÉGIA, CADA CONTEÚDO QUE CRIAMOS JUNTOS <strong class="purple-text">AUMENTA</strong> O VALOR DA SUA MARCA E <strong class="purple-text">ATRAI</strong> MAIS CLIENTES PRONTOS PARA FECHAR COM VOCÊ. DÊ ESSE PASSO PARA DESTACAR SUA EMPRESA E TRANSFORMAR SUA PRESENÇA ONLINE.
             </p>
             <h3 class="title-serif cta-subtitle">VAMOS TRABALHAR JUNTOS?</h3>
             <div class="cta-buttons">
@@ -274,9 +297,13 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Renova & Inova. Todos os direitos reservados.</p>
+            <p style="margin-top: 5px; font-size: 0.85em; color: rgba(255, 255, 255, 0.7);">
+                Desenvolvido com excelência por <strong>Grace Code Systems</strong>
+            </p>
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
