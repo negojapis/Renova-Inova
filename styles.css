@@ -202,6 +202,11 @@ a {
     animation: fadeIn 1s ease-out;
 }
 
+/* Letreiro dinâmico (Oculto no Desktop) */
+.hero-marquee {
+    display: none;
+}
+
 .hero .subtitle {
     font-size: 0.9rem;
     letter-spacing: 4px;
@@ -646,6 +651,11 @@ a {
     to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes marqueeScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
 /* Menu Toggle (Mobile) */
 .menu-toggle {
     display: none;
@@ -666,6 +676,10 @@ a {
 @media (max-width: 768px) {
     .navbar {
         padding: 15px 20px;
+    }
+    
+    .logo img {
+        height: 32px; /* Diminui a logo no cabeçalho do mobile */
     }
     
     .menu-toggle {
@@ -701,7 +715,6 @@ a {
         flex-direction: column;
         justify-content: flex-start;
         min-height: 85vh; /* Aumenta o espaço em branco na parte de baixo para empurrar a próxima seção */
-        border-bottom: 12px solid var(--primary-color); /* Faixinha roxa para separar as seções */
     }
 
     .hero-image {
@@ -717,6 +730,34 @@ a {
 
     .hero-bottom-bar {
         display: none; /* Esconde toda a caixa roxa no celular */
+    }
+
+    /* Exibe o letreiro digital dinâmico no celular */
+    .hero-marquee {
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: var(--primary-color);
+        color: var(--white);
+        padding: 12px 0;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        font-family: var(--font-sans);
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+    }
+
+    .hero-marquee .marquee-content {
+        display: inline-block;
+        white-space: nowrap;
+        animation: marqueeScroll 15s linear infinite;
+    }
+    
+    .hero-marquee span {
+        padding-right: 20px;
     }
 
     .hero h1 {
