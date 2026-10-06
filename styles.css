@@ -172,7 +172,8 @@ a {
     display: flex;
     justify-content: center;
     background-color: #ffffff;
-    /* Removido o padding-top para subir ainda mais */
+    position: relative;
+    container-type: inline-size;
 }
 
 .hero-image img {
@@ -698,6 +699,8 @@ a {
     .hero {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        min-height: 85vh; /* Aumenta o espaço em branco na parte de baixo para empurrar a próxima seção */
         border-bottom: 12px solid var(--primary-color); /* Faixinha roxa para separar as seções */
     }
 
